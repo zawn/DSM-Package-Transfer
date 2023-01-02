@@ -52,6 +52,6 @@ case $operation in
 		done
 		;;
 	help|*)
-		echo "list /n help"
+		echo "$0 list|transfer [packagefolder_name] [targetvolume_num]"
 		;;
 esac
