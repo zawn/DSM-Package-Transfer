@@ -1,17 +1,16 @@
 # DSM7 套件迁移脚本
 
 #### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+用于在Synology DSM7 中将套件迁移到不同的存储空间。
 
-#### 软件架构
-软件架构说明
+#### 测试平台
+所有功能在DS3615xs DSM 7.1.1-42962 Update 2中测试通过。
 
 
-#### 安装教程
+#### 原理
 
-1.  xxxx
+1.  所有套件均安装在/var/packages目录，进入相应套件（以StorageAnalyzer为例）的目录可以看到，如图所示的结构：
+![输入图片说明](pic2022-12-24%2017%2003%2023.png)
 2.  xxxx
 3.  xxxx
 
