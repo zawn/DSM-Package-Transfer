@@ -7,7 +7,7 @@ new_volume=$3
 case $operation in
 	list)
 		package_list=$(ls /var/packages/ |tr -s " ")
-		echo " Folder name - Package name
+		echo " Folder name -- Package name
 -----------------------------"
 		for a in $package_list;
 		do
@@ -18,9 +18,9 @@ case $operation in
 			then
 				package_name=$(cat /var/packages/$a/INFO | grep displayname\= | grep -o '".*"' |sed 's/"//g')
 			fi
-			echo $a - $package_name
+			echo $a -- $package_name
 		else
-			echo $a - /var/packages/$a/INFO does not exist.The package may be uninstalled.
+			echo $a -- /var/packages/$a/INFO does not exist.The package may be uninstalled.
 		fi
 		done
 		;;
