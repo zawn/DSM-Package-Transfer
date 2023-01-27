@@ -38,13 +38,15 @@
 1.  为避免数据丢失，操作前建议先停用要迁移的套件
 ![输入图片说明](pic/2022-12-24%2016%2035%2000.png)
 2. 执行`sudo -i`获得root权限
-3. `./transferpackage.sh list`
+3. `wget https://gitee.com/kangzeru/dsm_-transferpackage/raw/master/transferpackage.sh`
+4. `chmod +x transferpackage.sh`
+5. `./transferpackage.sh list`
  显示所有套件目录，找到要迁移套件的目录名
 ![输入图片说明](pic/2022-12-28%2011%2002%2007.png)
-4. `./transferpackage.sh transfer [packagefolder_name] [targetvolume_num]`
+6. `./transferpackage.sh transfer [packagefolder_name] [targetvolume_num]`
  例如：要把“存储空间分析器”套件迁移到存储空间2，则运行`./transferpackage.sh transfer StorageAnalyzer 2`
 ![输入图片说明](pic/2022-12-24%2017%2004%2030(1).png)
-5. 查看迁移结果
+7. 查看迁移结果
 ![输入图片说明](pic/2022-12-24%2016%2052%2007.png)
 
 
