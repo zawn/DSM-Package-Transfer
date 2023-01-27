@@ -1,20 +1,39 @@
 # DSM7 套件迁移脚本
 
-#### 介绍
+#### 一、介绍
 用于在Synology DSM7 中将套件迁移到不同的存储空间。
 
-#### 测试平台
+#### 二、测试平台
 所有功能在DS3615xs DSM 7.1.1-42962 Update 2中测试通过。
+##### 经测试的套件
+###### 1. 官方套件
+| 套件目录名 | 套件名称 | 迁移结果 |
+|-------|------|----|
+| CloudSync |  Cloud Sync    | 正常   |
+|  SynologyApplicationService     |  Synology应用程序服务    |  正常  |
+|   StorageAnalyzer    |  存储空间分析器    |  正常  |
+|   Node.js_v12    |  Node.js v12  | 正常   |
+|   SynologyPhotos    |  Synology Photos    | 正常   |
+|  LogCenter     |  日志中心    | 正常   |
 
+###### 2. [SynoCommunity](https://packages.synocommunity.com)套件
+| 套件目录名 | 套件名称 | 迁移结果 |
+|-------|------|----|
+|    transmission   |   Transmission   | 正常    |
+|    vim   |   Vim   |  正常   |
 
-#### 原理
+#### 三、原理
 
 1.  所有套件均安装在/var/packages目录，进入相应套件（以StorageAnalyzer为例）的目录可以看到，如图所示的结构：
 ![输入图片说明](pic/2022-12-24%2017%2003%2023.png)
 其中"etc" "home" "target" "tmp" "var"目录链接到了对应存储空间的相应目录
-2.  操作步骤：1）复制原存储空间的目录到新存储空间；2）修改"etc" "home" "target" "tmp" "var"链接到新存储空间。
+2.  操作步骤：
 
-#### 使用说明
+ 1）复制原存储空间的目录到新存储空间；
+
+ 2）修改"etc" "home" "target" "tmp" "var"链接到新存储空间。
+
+#### 四、使用说明
 
 1.  为避免数据丢失，操作前建议先停用要迁移的套件
 ![输入图片说明](pic/2022-12-24%2016%2035%2000.png)
