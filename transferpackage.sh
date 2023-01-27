@@ -13,7 +13,11 @@ case $operation in
 		do
 		if [ -e /var/packages/$a/INFO ]
 		then
-			package_name=$(cat /var/packages/$a/INFO | grep displayname\= | grep -o '".*"' |sed 's/"//g')
+			package_name=$(cat /var/packages/$a/INFO | grep displayname_chs\= | grep -o '".*"' |sed 's/"//g')
+			if [ -z "$package_name" ]
+			then
+				package_name=$(cat /var/packages/$a/INFO | grep displayname\= | grep -o '".*"' |sed 's/"//g')
+			fi
 			echo $a - $package_name
 		else
 			echo $a - /var/packages/$a/INFO does not exist.The package may be uninstalled.
